@@ -1,0 +1,55 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <div class="container">
+        <div class="row pl-2 pr-2">
+            <div class="col">
+
+                <h1>Write comment {{.Int}} page</h1>
+                <form action="/users/post/comment/" method="POST">
+                    <div class="custom-row">
+                        <div>
+                            <div class="form-group">
+                                <label for="idd">postId</label>
+                                <input type="text" class="form-control text-center" id="postId" name="postId" readonly
+                                       value="{{.Int }}">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-group">
+                                <label for="id">Id</label>
+                                <input type="text" class="form-control text-center" id="id" name="id" readonly
+                                       value="{{.Int2}}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pl-3 pr-3 " >
+                        <div class="form-group col-md-4" >
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{.Comment.Name}}">
+                        </div>
+                        <div class="form-group col-md-6 ml-md-1 ">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{.Comment.Email}}">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-10">
+                        <label for="body">Body</label>
+                        <textarea class="form-control" id="body" name="body" rows="5">{{.Comment.Body}}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="id" id="id" value="{{.Int2}}">Update
+                    </button>
+                </form>
+                <br>
+                <a href="/" class="btn btn-success">🏠 <span>&#8656;</span> Back</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{{end}}

@@ -1,0 +1,38 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <div class="container ">
+        <h1 class="text-center">Comment {{.Comment.Id}} page</h1>
+        <div class="row mb-2 text-center pl-2 pr-2">
+            <div class="col-md-1 col-sm-2 bordered ">
+                <div class="bgc-g">postId</div>
+                <hr>
+                <div >{{.Comment.PostId}}</div>
+            </div>
+            <div class="col-md-1 col-sm-2 bordered">
+                <div class="bgc-g">id</div>
+                <hr>
+                <div>{{.Comment.Id}}</div>
+            </div>
+
+            <div class="col-md-2 col-sm-4 bordered">
+                <div class="bgc-g">name</div>
+                <hr>
+                <div>{{.Comment.Name}}</div>
+            </div>
+            <div class="col-md-2 col-sm-4 bordered">
+                <div class="bgc-g" >email</div>
+                <hr>
+                <div >{{.Comment.Email}}</div>
+            </div>
+
+            <div class=" col-md-6 col-sm-12 bordered">
+                <div class="bgc-g" >body</div>
+                <hr>
+                <div >{{.Comment.Body}}</div>
+            </div>
+        </div>
+        <a href="/" class="btn btn-success">🏠 <span>&#8656;</span> Back</a>
+    </div>
+
+{{end}}

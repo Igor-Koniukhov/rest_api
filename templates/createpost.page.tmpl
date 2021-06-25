@@ -1,0 +1,37 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <div class="container">
+        <div class="row pr-2 pl-2">
+            <div class="col">
+                <h1>Create post {{.Int}} page</h1>
+                <form  method="POST">
+                    <div class="custom-row">
+                        <div class="form-group">
+                            <label for="userId">userId</label>
+                            <input type="text" class="form-control" id="userId" name="userId" value="{{.Int2}}" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="id">Id</label>
+                            <input type="text" class="form-control" id="id" name="id" value="{{.Int}}" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-10">
+                        <label for="title">title</label>
+                        <input type="text" class="form-control" id="title" name="title" value="{{.Post.Title}}">
+                    </div>
+                    <div class="form-group col-md-10">
+                        <label for="body">Body</label>
+                        <textarea type="text" class="form-control" id="body" name="body" rows="5">{{.Post.Body}}</textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary" name="id" id="id" value="{{.Post.Id}}">Update</button>
+                </form>
+                <a href="/" class="btn btn-success mt-2">🏠 <span>&#8656;</span> Back</a>
+
+            </div>
+        </div>
+    </div>
+
+{{end}}

@@ -1,0 +1,48 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <div class="container">
+        <div class="row pl-2 pr-2">
+            <div class="col">
+
+                <h1>Update comment {{.Comment.Id}} page</h1>
+                <form action="/users/comment/update/" method="POST">
+                    <div class="custom-row">
+                        <div class="form-group">
+                            <label for="postId">postId</label>
+                            <input type="text" class="form-control" id="postId" name="postId " readonly
+                                   value="{{.Comment.PostId}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id">Id</label>
+                            <input type="text" class="form-control" id="id" name="id" value="{{.Comment.Id}} " readonly>
+                        </div>
+                    </div>
+                    <div class="row pl-3 pr-3">
+                        <div class="form-group col-md-4">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{.Comment.Name}}">
+                        </div>
+                        <div class="form-group ml-md-1 col-md-6">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{.Comment.Email}}">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group col-md-10">
+                        <label for="body">Body</label>
+                        <textarea class="form-control" id="body" name="body" rows="5">{{.Comment.Body}}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="id" id="id" value="{{.Comment.Id}}">Update
+                    </button>
+                </form>
+                <a href="/" class="btn btn-success mt-2">🏠 <span>&#8656;</span> Back</a>
+            </div>
+
+        </div>
+
+    </div>
+
+{{end}}

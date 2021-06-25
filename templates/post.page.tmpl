@@ -1,0 +1,32 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <div class="container ">
+        <h1 class="text-center">Post {{.Post.Id}} page</h1>
+        <div class="row mb-2 text-center pl-2 pr-2">
+            <div class="col-md-1 col-sm-4 bordered ">
+                <div class="bgc-g">userId</div>
+                <hr>
+                <div>{{.Post.UserId}}</div>
+            </div>
+            <div class="col-md-1 col-sm-4 bordered">
+                <div class="bgc-g">id</div>
+                <hr>
+                <div>{{.Post.Id}}</div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 bordered">
+                <div class="bgc-g">title</div>
+                <hr>
+                <div>{{.Post.Title}}</div>
+            </div>
+            <div class=" col-md-6 col-sm-12 bordered">
+                <div class="bgc-g">body</div>
+                <hr>
+                <div>{{.Post.Body}}</div>
+            </div>
+        </div>
+        <a href="/" class="btn btn-success">🏠 <span>&#8656;</span> Back</a>
+    </div>
+
+{{end}}
